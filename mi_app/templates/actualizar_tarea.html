@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actualizar</title>
+    </head>
+    <body>
+        <form method="POST">
+            {% csrf_token %}  
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" required name="titulo" value="{{tarea.titulo}}"> <br><br>
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" name="descripcion">{{tarea.descripcion}}</textarea>
+            <button type="submit">Crear Tarea</button>
+        </form>
+    </body>
+</html>

@@ -11,7 +11,8 @@
         <form method="POST">
             {% csrf_token %}  
             <button type="submit" class="btn btn-danger">Eliminar</button>
-            <a href="/listar_tareas" class="btn btn-primary">Cancelar</a>
+            <!--AQUI DEBO COLOCAR LA URL DE LA VISTA DEFINIDA EN EL URLS.PY ES EL PRIMER PARAMETRO QUE SE ENCUENTRA ''-->
+            <a href="/listar_tareas_soy_la_url" class="btn btn-primary">Cancelar</a>
         </form>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>

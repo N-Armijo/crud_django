@@ -12,6 +12,10 @@
             <input type="text" id="titulo" required name="titulo" value="{{tarea.titulo}}"> <br><br>
             <label for="descripcion">Descripción</label>
             <textarea name="descripcion" id="descripcion" name="descripcion">{{tarea.descripcion}}</textarea>
+            <select id="completado" name="completado">
+                <option value="False">Pendiente</option>
+                <option value="True">Completado</option>
+            </select>
             <button type="submit">Actualizar Tarea</button>
         </form>
     </body>

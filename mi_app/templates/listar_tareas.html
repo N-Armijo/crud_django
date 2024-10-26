@@ -11,13 +11,23 @@
         <table class="table table-striped">
             <tr>
                 <th>Tarea</th>
-                <th>Accion</th>
                 <th>Descripción</th>
+                <th>Fecha de Creacion</th>
+                <th>Estado</th>
+                <th>Accion</th>
             </tr>
             {% for tarea in tareas %}
                 <tr>
                     <td>{{tarea.titulo}}</td>
                     <td>{{tarea.descripcion}}</td>
+                    <td>{{tarea.fecha_creacion}}</td>
+                    <td>
+                        {%if tarea.completado == False %}
+                            Incompleto
+                        {% else %}
+                            Completado
+                        {% endif %}
+                    </td>
                     <td>
                         <a href="{% url 'actualizar_tarea' tarea.id %}" class="btn btn-warning">Editar</a>
                         <a href="{% url 'eliminar_tarea' tarea.id %}" class="btn btn-danger">Eliminar</a>

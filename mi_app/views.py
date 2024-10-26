@@ -23,6 +23,7 @@ def actualizar_tarea(request,id):
     if request.method =='POST':
         tarea.titulo = request.POST.get('titulo')
         tarea.descripcion = request.POST.get('descripcion')
+        tarea.completado = request.POST.get('completado')
         tarea.save()#guarda los cambios en la base de datos
         return redirect('listar_tareas_me_llamo_name')
     return render(request, 'actualizar_tarea.html', {'tarea':tarea})
